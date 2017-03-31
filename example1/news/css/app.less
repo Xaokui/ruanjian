@@ -1,0 +1,142 @@
+@color: #3e86ce;
+
+// 定义方法
+.hlh(@h) {
+	line-height: @h;
+	height: @h;
+}
+.abs(@t, @l) {
+	position: absolute;
+	top: @t;
+	left: @l;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.header {
+	.hlh(50px);
+	color: #fff;
+	background: @color;
+	.arrow {
+		float: left;
+		position: relative;
+		span {
+			.abs(10px, 0px);
+			border: 16px solid transparent;
+			border-right: 16px solid #fff;
+		}
+		.blue {
+			border-right-color: @color;
+			left: 4px;
+		}
+	}
+	.login {
+		float: right;
+		margin-right: 10px;
+	}
+	h1 {
+		font-size: 30px;
+		text-align: center;
+		text-indent: 30px;
+	}
+}
+.home {
+	li {
+		padding: 10px;
+		border-bottom: 1px solid #ccc;
+		overflow: hidden;
+		img {
+			width: 28%;
+			float: left;
+		}
+		.intro {
+			margin-left: 28%;
+			padding-left: 10px; 
+			h2 {
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+			p {
+				font-size: 14px;
+				line-height: 20px;
+				.comment-num {
+					float: right;
+					margin-right: 10px;
+				}
+			}
+		}
+	}
+}
+.detail {
+	text-align: center;
+	h1 {
+		.hlh(50px);
+		font-size: 20px;
+	}
+	p {
+		font-size: 14px;
+		color: #333;
+		line-height: 30px;
+		text-align: left;
+		margin: 0 20px;
+	}
+	.comment-num {
+		float: right;
+	}
+	img {
+		margin-bottom: 20px;
+		width: 100%;
+	}
+	.btn {
+		.hlh(40px);
+		background: @color;
+		color: #fff;
+		margin: 40px 20px;
+		border-radius: 5px;
+	}
+}
+.comments {
+	.container {
+		padding: 30px 20px;
+		textarea {
+			width: 100%;
+			display: block;
+			height: 120px;
+			margin-bottom: 30px;
+			padding: 5px;
+			box-sizing: border-box;
+			background: #efefef;
+		}
+		.submit {
+			overflow: hidden;
+			margin-bottom: 20px;
+			span {
+				float: right;
+				padding: 8px 20px;
+				background: @color;
+				color: #fff;
+				border-radius: 5px;
+			}
+		}
+		li {
+			padding: 10px 0;
+			border-bottom: 1px solid #ccc;
+			h3 {
+				.hlh(30px);
+				font-size: 20px;
+			}
+			p {
+				margin: 10px 0;
+				font-size: 16px;
+				line-height: 20px;
+			}
+			span {
+				font-size: 12px;
+				line-height: 20px;
+			}
+		}
+	}
+}
