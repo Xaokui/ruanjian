@@ -1,0 +1,145 @@
+@color: #583f7f;
+// 设置块元素宽度，并且居中
+.wcenter (@w, @m:0) {
+	width: @w;
+	margin: @m auto;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+.header {
+	margin-bottom: 0;
+	a {
+		color: @color;
+		cursor: pointer;
+	}
+	.nav .choose a,
+	.nav a:hover {
+		background-color: #f3f3f3 !important;
+	}
+}
+.default-page {
+	.banner {
+		background: @color;
+		text-align: center;
+		padding-top: 70px;
+		color: #fff;
+		padding-bottom: 120px;
+		.btn-b-logo {
+			.wcenter(150px);
+			font-size: 120px;
+			height: 150px;
+			line-height: 150px;
+			border: 1px solid #fff;
+			border-radius: 20px;
+		}
+		h1 {
+			.wcenter(900px, 30px);
+			font-size: 30px;
+			line-height: 40px;
+		}
+		.btn-lg {
+			border: 1px solid #fff;
+			user-select: none;
+			-webkit-user-select: none;
+			&:hover {
+				color: @color;
+				background: #fff;
+			}
+		}
+		p {
+			font-size: 12px;
+			color: lighten(@color, 30%);
+			margin: 20px auto 0;
+		}
+	}
+}
+.first-list {
+	padding-top: 100px;
+	padding-bottom: 80px;
+	text-align: center;
+	font-size: 20px;
+	border-bottom: 1px solid #ccc;
+	.title-description {
+		.wcenter(870px);
+	}
+	// 定义小横线
+	.small-line {
+		.wcenter(100px, 40px);
+		margin-bottom: 40px;
+		border-bottom: 1px solid #efefef;
+	}
+	ul li {
+		list-style: none;
+		width: 33.33333333%;
+		float: left;
+		img {
+			width: 90%;
+		}
+		p {
+			font-size: 16px;
+			.wcenter(90%);
+		}
+	}
+	.btn-lg {
+		margin-top: 20px;
+		border: 1px solid @color;
+		color: @color;
+		&:hover {
+			background: @color;
+			color: #fff;
+		}
+	}
+}
+// 混合复用first-list的样式
+.second-list {
+	.first-list;
+}
+
+.section {
+	.banner {
+		background: @color;
+		color: #fff;
+		padding: 40px 0;
+		h1 {
+			font-size: 60px;
+		}
+		p {
+			font-size: 20px;
+			color: lighten(@color, 40%)
+		}
+	}
+	.main-content {
+		float: left;
+		width: 800px;
+		h2 {
+			border-bottom: 1px solid #eee;
+			margin-bottom: 20px;
+			padding-bottom: 10px;
+		}
+	}
+	.main-aside {
+		margin-left: 820px;
+		padding-top: 60px;
+		a {
+			color: #666;
+		}
+		li {
+			line-height: 30px;
+			font-size: 20px;
+			border-left: 1px solid transparent;
+			padding-left: 20px;
+			&:hover {
+				border-left: 1px solid @color;
+				a {
+					color: @color;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	li {
+		list-style: none;
+	}
+}
